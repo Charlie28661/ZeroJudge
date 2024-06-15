@@ -5,7 +5,7 @@ loc = {
     "D" : 13,
     "E" : 14,
     "F" : 15,
-    "D" : 16,
+    "G" : 16,
     "H" : 17,
     "I" : 34,
     "J" : 18,
@@ -30,15 +30,18 @@ loc = {
 a = list(input())
 convert = loc.get(a[0])
 
-num1 = convert // 10
-num2 = convert % 10
+num1 = convert // 10 #十位數
+num2 = convert % 10 #個位數
 
-r = num2 * 9 + num1 + int(a[9])
+r = num2 * 9 + num1
 
+j = 0
 for i in range(1, 9):
-    r = r + int(a[i]) * (9-i)
+    j = j + int(a[9-i]) * (i)
 
-if (r % 10 == 0):
+f = r + j + int(a[9])
+
+if (f % 10 == 0):
     print("real")
 else:
     print("fake")
