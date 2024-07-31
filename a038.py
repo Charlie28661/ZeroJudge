@@ -1,6 +1,7 @@
 n = list(map(int, input().split()))
 
 a = []
+tmp = ""
 
 
 if len(n) % 2 == 0: #偶數
